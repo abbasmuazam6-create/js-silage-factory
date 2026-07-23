@@ -8,11 +8,15 @@ RUN apt-get update && apt-get install -y \
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-COPY . .
+# Copy only composer files first
+COPY composer.json composer.lock ./
 
 RUN mkdir -p bootstrap/cache storage/framework/views storage/framework/sessions storage/framework/cache
 
-RUN composer install --no-dev --optimize-autoloader --no-interaction
+RUN composer install --no-dev --optimize-autoloader --no-interaction --ignore-platform-reqs
+
+# Copy the rest of the application
+COPY . .
 
 EXPOSE 8000
 
