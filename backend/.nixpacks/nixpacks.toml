@@ -1,0 +1,7 @@
+[build]
+phpVersion = "8.3"
+
+[[build.command]]
+command = "mkdir -p bootstrap/cache"
+[[build.command]]
+command = "composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader"
