@@ -1,0 +1,16 @@
+{
+    "$schema": "https://railway.app/railway.schema.json",
+    "build": {
+      "builder": "NIXPACKS",
+      "nixpacks": {
+        "phpVersion": "8.3",
+        "build": {
+          "command": "php artisan config:cache && php artisan route:cache"
+        }
+      }
+    },
+    "deploy": {
+      "startCommand": "php artisan serve --host=0.0.0.0 --port=${PORT}",
+      "healthcheckPath": "/health"
+    }
+  }
