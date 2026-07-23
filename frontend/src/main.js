@@ -5,8 +5,8 @@ import App from './App.vue'
 import router from './router'
 import axios from 'axios'
 
-// Set base URL
-axios.defaults.baseURL = 'http://127.0.0.1:8000/api'
+// Set base URL from environment variable, fallback to localhost for development
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api'
 
 // Always attach token if it exists
 axios.interceptors.request.use(
