@@ -12,12 +12,10 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        // Register custom middleware aliases here
         $middleware->alias([
             'token.auth' => \App\Http\Middleware\TokenAuth::class,
         ]);
 
-        // Add CORS middleware to API routes
         $middleware->api(prepend: [
             \App\Http\Middleware\CorsMiddleware::class,
         ]);
