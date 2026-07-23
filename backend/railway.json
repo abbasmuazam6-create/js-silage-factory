@@ -5,7 +5,7 @@
       "nixpacks": {
         "phpVersion": "8.3",
         "build": {
-          "command": "php artisan config:cache && php artisan route:cache"
+          "command": "mkdir -p bootstrap/cache && composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader"
         }
       }
     },
