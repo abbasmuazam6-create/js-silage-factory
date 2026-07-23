@@ -1,0 +1,27 @@
+# Backend
+backend/vendor/
+backend/.env
+backend/storage/
+backend/bootstrap/cache/
+backend/node_modules/
+backend/public/storage/
+backend/.phpunit.cache/
+backend/.idea/
+backend/.vscode/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.vite/
+frontend/.output/
+frontend/.nitro/
+frontend/.cache/
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+*.sqlite
+*.sqlite-journal
+*.tmp
