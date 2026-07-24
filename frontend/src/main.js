@@ -5,8 +5,8 @@ import App from './App.vue'
 import router from './router'
 import axios from 'axios'
 
-// Set base URL from environment variable, fallback to localhost for development
-axios.defaults.baseURL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api'
+// ✅ HARDCODED BACKEND URL (NO ENV VARIABLES)
+axios.defaults.baseURL = 'https://js-silage-factory-8xfh-4x6r5n324-abbasmuazam6.vercel.app/api'
 
 // Always attach token if it exists
 axios.interceptors.request.use(
