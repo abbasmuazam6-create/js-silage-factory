@@ -12,14 +12,14 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-    $middleware->alias([
-        'token.auth' => \App\Http\Middleware\TokenAuth::class,
-    ]);
-
-    $middleware->api(prepend: [
-        \App\Http\Middleware\CorsMiddleware::class,
-    ]);
-})
+        $middleware->alias([
+            'token.auth' => \App\Http\Middleware\TokenAuth::class,
+        ]);
+    
+        $middleware->api(prepend: [
+            \App\Http\Middleware\CorsMiddleware::class,
+        ]);
+    })
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
