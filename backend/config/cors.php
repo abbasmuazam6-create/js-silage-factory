@@ -4,9 +4,9 @@ return [
     'paths' => ['api/*', 'sanctum/csrf-cookie', 'login', 'logout', 'register'],
     'allowed_methods' => ['*'],
     'allowed_origins' => [
-        'http://localhost:5173',
-        'http://127.0.0.1:5173',
-        'https://js-silage-factory.vercel.app',  // <-- ADD THIS LINE
+        'https://js-silage-factory.vercel.app', // Production frontend
+        'http://localhost:5173',               // Local development
+        'http://127.0.0.1:5173',               // Local development (alternative)
     ],
     'allowed_origins_patterns' => [],
     'allowed_headers' => ['*'],
