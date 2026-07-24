@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "backend/api/index.php",
+        "use": "@vercel/php"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "backend/api/index.php"
+      }
+    ]
+  }
