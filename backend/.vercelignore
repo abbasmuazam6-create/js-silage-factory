@@ -1,0 +1,7 @@
+storage/
+bootstrap/cache/
+vendor/
+.env
+.git/
+*.sqlite
+*.sqlite-journal
